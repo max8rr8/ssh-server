@@ -11,6 +11,8 @@
   "dependencies": {
     "boxen": "^4.1.0",
     "chalk": "^2.4.2",
+    "marked": "^0.7.0",
+    "marked-terminal": "^3.3.0",
     "ssh2": "^0.8.5"
   }
 }

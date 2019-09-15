@@ -29,13 +29,13 @@ module.exports.getCommunicator = function(stream, onMessage, onEnd){
   })
 
   readline.on('line', (msg)=>{
-    stream.write('\033[s\033[1A\033[1K\r')
+    stream.write('\033[s\033[1A\033[2K\r')
     onMessage(msg)
     readline.prompt()
   })
   
   return msg=>{
-    stream.write('\033[1K\r' + msg)
+    stream.write('\033[2K\r' + msg)
     readline.prompt()
   }
 }

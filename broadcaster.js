@@ -12,4 +12,4 @@ module.exports.broadcast = msg => {
   listeners.forEach(wr => wr(msg));
 }
 
-module.exports.getCache = ()=>cache.join('\r\033[1K')
+module.exports.getCache = ()=>cache.join('\r\033[2K')

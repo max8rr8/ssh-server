@@ -92,3 +92,7 @@ function parseAndExecute(str) {
 // console.log(parseAndExecute('@box{ @box{d} hey }'));
 
 module.exports.parseAndExecute = parseAndExecute;
+
+module.exports.registerMethod = function(name, func) {
+  methods[name] = func
+}

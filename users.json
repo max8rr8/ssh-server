@@ -1,4 +1,4 @@
 {
-  "admin": "admin.",
-  "max": "pass"
+  "admin": {"salt":"bc61c629178b4783","password":"9637a4edbb4a101f15c0e8e882d2192d3e13f62880e4ce7fefd84da8c29f30a94a69c7f9635139be8607b44a01d2f84aeae6f435a3cc9fd298b422e4031df77f"},
+  "max": {"salt":"f70d5ccdd8aad514","password":"dce465c83483d9cffc176d63ae6488cd05febf4931e4b8a7e48d08e8d996adbba6508b6fb60a659bc786043a54e63295bcc7b44ba75689e9f24c9fa70bcc7509"}
 }

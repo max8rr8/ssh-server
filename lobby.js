@@ -1,5 +1,6 @@
 const { Server } = require('ssh2');
 const { readFileSync } = require('fs');
+const { checkPass } = require('./crypto')
 
 const hostKey = readFileSync('./ssh');
 const users = JSON.parse(readFileSync('./users.json'));
@@ -17,7 +18,7 @@ module.exports.createServer = function createServer({ lobby }) {
       client
         .on('authentication', ctx => {
           if (ctx.method !== 'password') return ctx.reject();
-          if (ctx.password !== users[ctx.username]) ctx.reject();
+          if (!checkPass(ctx.password, users[ctx.username])) ctx.reject();
           nick = ctx.username;
           ctx.accept();
         })
